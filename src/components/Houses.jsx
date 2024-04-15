@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 function Houses() {
   const [houses, setHouses] = useState([])
   const getHouses = async () => {
-    let housesData = await axios.get('https://haiku-bnb.onrender.com/houses')
+    let housesData = await axios.get('https://rent-bnb-api.onrender.com/houses')
     setHouses(housesData.data)
   }
   useEffect(() => {

@@ -46,7 +46,7 @@ function Booking({ house }) {
     //POST data
     try {
       const response = await axios.post(
-        'https://haiku-bnb.onrender.com/bookings',
+        'https://rent-bnb-api.onrender.com/bookings',
         formObject
       )
       const bookingId = response.data.booking_id

@@ -14,7 +14,7 @@ function Reviews({ rating }) {
   const getReviews = async () => {
     try {
       const { data } = await axios.get(
-        `https://haiku-bnb.onrender.com/reviews?house_id=${id}`
+        `https://rent-bnb-api.onrender.com/reviews?house_id=${id}`
       )
       setReviews(data)
     } catch (error) {
@@ -34,7 +34,7 @@ function Reviews({ rating }) {
       formObj.house_id = id
       formObj.rating = formObj.form_rating
       const { data } = await axios.post(
-        `https://haiku-bnb.onrender.com/reviews`,
+        `https://rent-bnb-api.onrender.com/reviews`,
         formObj
       )
 
