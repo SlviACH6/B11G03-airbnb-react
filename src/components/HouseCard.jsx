@@ -21,7 +21,6 @@ function HouseCard(props) {
     totalNights,
     totalPrice
   } = props.house
-
   return (
     <Link to={`/houses/${house_id}`}>
       <div className="block border rounded-md">
@@ -43,6 +42,8 @@ function HouseCard(props) {
                 />
               ))}
             </div>
+            <p>{reviews || reviews_count}</p>
+            {/* merge merge 2 here */}
             <p>
               <FontAwesomeIcon
                 icon={faCommentDots}
@@ -51,6 +52,7 @@ function HouseCard(props) {
               {reviews || reviews_count}
             </p>
           </div>
+
           {/* if is Listing page */}
           {isListing && (
             <div className="flex justify-start gap-2 mt-2">
@@ -68,7 +70,6 @@ function HouseCard(props) {
               </button>
             </div>
           )}
-
           {/* if is booking page */}
           {isbooking ? (
             <div className=" flex-col justify-center  pt-2 pb-2 bg-green-100 border rounded-lg">
@@ -86,5 +87,4 @@ function HouseCard(props) {
     </Link>
   )
 }
-
 export default HouseCard
